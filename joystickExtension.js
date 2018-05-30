@@ -69,6 +69,9 @@
     function processData() {
         var s = new Uint8Array(rawData);
 
+        console.log("processData()");
+        console.log(s);
+
         clearButtons();
 
         buttons.up=(s[9]==0)?0:1;
@@ -107,6 +110,8 @@
     }
 
     function getButtonPressed(btn) {
+        console.log("getButtonPressed("+btn+")");
+        console.log(rawData);
         if (rawData) processData();
         switch (btn) {
             case 'left stick up':
