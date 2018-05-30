@@ -31,12 +31,14 @@
 
 
     ext._stop = function () {
+        console.log("stopped")
         clearButtons();
     };
 
     var poller = null;
     ext._deviceConnected = function (dev) {
         if (device) return;
+        console.log("connected")
         device = dev;
         device.open();
         poller = setInterval(function () {
