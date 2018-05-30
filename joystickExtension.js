@@ -99,9 +99,6 @@
         buttons.R_Stick_X=128-s[5];
         buttons.R_Stick_Y=128-s[6];
 
-
-        clearButtons();
-
         rawData = null;
     }
 
