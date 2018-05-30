@@ -99,6 +99,8 @@
         buttons.R_Stick_X=128-s[5];
         buttons.R_Stick_Y=128-s[6];
 
+        print(buttons);
+
         rawData = null;
     }
 
@@ -112,6 +114,7 @@
         console.log("getButtonPressed("+btn+")");
         console.log(rawData);
         if (rawData) processData();
+        console.log(buttons[btn]);
         switch (btn) {
             case 'left stick up':
                 return buttons.L_Stick_Y<0;
